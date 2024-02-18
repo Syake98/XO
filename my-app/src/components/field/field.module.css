@@ -1,0 +1,16 @@
+.field {
+	max-width: 100px;
+	max-height: 100px;
+
+}
+
+.fieldButton {
+	background-color: aqua;
+	width: 33%;
+	height: 20px;
+	border: 1px solid black;
+}
+
+.fieldButton :nth-child(3) {
+	flex-wrap: wrap;
+}

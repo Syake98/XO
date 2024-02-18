@@ -1,0 +1,13 @@
+.game {
+	width: 200px;
+	height: 200px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid black;
+	border-radius: 10%;
+	gap: 20px;
+}
