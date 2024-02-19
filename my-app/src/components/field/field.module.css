@@ -1,16 +1,37 @@
-.field {
-	max-width: 100px;
-	max-height: 100px;
+.fieldButtons {
+	display: flex;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 10px;
+	width: 100%;
+	height: 75%;
+	background: none;
 
 }
 
 .fieldButton {
-	background-color: aqua;
-	width: 33%;
-	height: 20px;
-	border: 1px solid black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 30%;
+	height: 30%;
+	background: linear-gradient(to bottom, #4d9ee5 0%, #868f9a 100%);
+	border: 1px solid #e6ec23;
+	border-radius: 10%;
+	box-shadow: 0 0 5px #0008;
+	cursor: pointer;
+	font-family: monospace;
+	font-size: 5rem;
+	user-select: none;
+	transition: 0.2s;
 }
 
-.fieldButton :nth-child(3) {
-	flex-wrap: wrap;
+.fieldButton:hover:not(:active) {
+	filter: brightness(1.2);
+}
+
+.fieldButton:active {
+	box-shadow: 0 0 7px #0008 inset;
 }

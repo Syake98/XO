@@ -1,8 +1,8 @@
 import styles from './Information.module.css'
 
-export const InformationLayout = ({winnerSign}) => {
+export const InformationLayout = ({currentMessage}) => {
 	return (
-		<div className={styles.informationLayout}>{winnerSign}</div>
+		<div className={styles.informationLayout}>{currentMessage}</div>
 	)
 }
 

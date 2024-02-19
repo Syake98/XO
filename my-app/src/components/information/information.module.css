@@ -1,5 +1,13 @@
 .informationLayout {
-	font-size: 22px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	text-align: center;
 	justify-content: center;
+	font-size: 50px;
+	font-weight: 600;
+	line-height: 2rem;
+	height: 15%;
+	color: #e6ec23;
+	user-select: none;
 }
