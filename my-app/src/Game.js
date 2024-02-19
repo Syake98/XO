@@ -8,7 +8,6 @@ export const Game = () => {
 	const [field, setField] = useState(['', '', '', '', '', '', '', '', '']);
 
 	let currentMessage = '';
-
 	if (isDraw) {
 		currentMessage = 'Ничья';
 	} else if (!isDraw && isGameEnded) {
@@ -34,7 +33,7 @@ export const Game = () => {
 		field,
 		setField,
 		currentMessage,
-		gameReset
+		gameReset,
 	};
 
 	return <GameLayout {...gameState} />;

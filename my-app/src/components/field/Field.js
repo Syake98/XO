@@ -15,23 +15,34 @@ export const Field = (gameState) => {
 			[2, 4, 6], // Варианты побед по диагонали
 		];
 
-		const xArray = field
-			.map((el, index) => (el === 'X' ? index : ''))
-			.filter((el) => el);
+		// const xArray = field
+		// 	.map((el, index) => (el === 'X' ? index : ''))
+		// 	.filter((el) => el);
 
-		const oArray = field
-			.map((el, index) => (el === 'O' ? index : ''))
-			.filter((el) => el);
+		// const oArray = field
+		// 	.map((el, index) => (el === 'O' ? index : ''))
+		// 	.filter((el) => el);
 
-		const draw = field.every((el) => el);
+		// const xWin = wins.some((winSet) =>
+		// 	winSet.every((winNum) => xArray.includes(winNum)),
+		// );
+
+		// const oWin = wins.some((winSet) =>
+		// 	winSet.every((winNum) => oArray.includes(winNum)),
+		// );
+		// console.log(xArray, oArray);
+
+		// Почему при нажатии сперва выполняется функция и выводит старое значение,
+		//  а только потом происходит ререндер. Если делать как сверху, то победитель
+		//  выводится только на следующий ход. Всю голову сломал, не пойму почему
 
 		const xWin = wins.some((winSet) =>
-			winSet.every((winNum) => xArray.includes(winNum)),
+			winSet.every((winValue) => field[winValue] === 'X'),
 		);
-
 		const oWin = wins.some((winSet) =>
-			winSet.every((winNum) => oArray.includes(winNum)),
+			winSet.every((winValue) => field[winValue] === 'O'),
 		);
+		const draw = field.every((el) => el);
 		if (draw) {
 			return 'draw';
 		}
